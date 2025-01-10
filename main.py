@@ -25,11 +25,17 @@ themes_by_year.rename(columns={'theme_id':'nr_themes'}, inplace=True)
 #plt.title('Number of themes and sets released by year-on-year')
 #plt.show()#show the graph
 #create scatter plot of the average number of parts per set
-parts_of_sets=sets.groupby(['year']).agg({'num_parts':pd.Series.mean})#average number of parts per set
-plt.scatter(parts_of_sets.index[:-2], parts_of_sets['num_parts'][:-2])#scatter plot
-plt.title('Average number of parts per set')
-plt.xlabel('Year')
-plt.ylabel('Number of parts')
-plt.savefig('images/parts_of_sets.png')
+themes= pd.read_csv('data/themes.csv')
+set_theme_count=sets["theme_id"].value_counts()#count the number of sets per theme
+set_theme_count = pd.DataFrame({'id':set_theme_count.index,'set_count':set_theme_count.values})#create a dataframe
+#merge the themes and set_theme_count dataframes
+merged_df = pd.merge(set_theme_count, themes, on='id')
+#create a plot bar
+plt.figure(figsize=(14,8))
+plt.xticks(fontsize=14, rotation=45)
+plt.yticks(fontsize=14)
+plt.ylabel('Number of Sets', fontsize=14)
+plt.xlabel('Theme Name', fontsize=14)
+plt.bar(merged_df.name[:10], merged_df.set_count[:10])
 plt.show()
 
