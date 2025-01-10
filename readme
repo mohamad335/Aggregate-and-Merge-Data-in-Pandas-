@@ -1,0 +1,54 @@
+# Introduction
+
+Today we'll dive deep into a dataset all about LEGO. From the dataset we can ask whole bunch of interesting questions about the history of the LEGO company, their product offering, and which LEGO set ultimately rules them all:
+
+What is the most enormous LEGO set ever created and how many parts did it have?
+
+How did the LEGO company start out? In which year were the first LEGO sets released and how many sets did the company sell when it first launched?
+
+Which LEGO theme has the most sets? Is it one of LEGO's own themes like Ninjago or a theme they licensed liked Harry Potter or Marvel Superheroes?<
+
+When did the LEGO company really expand its product offering? Can we spot a change in the company strategy based on how many themes and sets did it released year-on-year?<
+
+Did LEGO sets grow in size and complexity over time? Do older LEGO 
+sets tend to have more or fewer parts than newer sets?</li>
+
+**Data Source**
+
+(https://rebrickable.com/downloads/) has compiled data on all the LEGO pieces in existence. I recommend you use download the .csv files provided in this lesson. 
+so we 
+Number of Sets Released by Year:
+
+Groups the sets by year and counts the number of sets released each year.
+Plots the number of sets released by year.
+Number of Themes Released by Year:
+
+Groups the sets by year and counts the number of unique themes released each year.
+Plots the number of themes released by year.
+Combined Plot:
+
+Creates a combined plot with two y-axes to show the number of themes and sets released by year.
+Average Number of Parts per Set by Year:
+
+Calculates the average number of parts per set by year.
+Creates a scatter plot of the average number of parts per set by year.
+Top Themes by Number of Sets:
+
+Counts the number of sets per theme.
+Merges the themes and set count dataframes.
+Creates a bar plot of the top 10 themes by the number of sets.
+Example Output
+The script generates various plots showing the trends in LEGO sets and themes over the years.
+
+Number of Themes and Sets Released by Year
+Number of themes and sets released by year
+
+Average Number of Parts per Set by Year
+Average number of parts per set by year
+
+Top Themes by Number of Sets
+Top themes by number of sets
+
+License
+This project is licensed under the MIT License.
+
